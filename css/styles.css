@@ -1,0 +1,38 @@
+.centering-wrapper {
+	text-align: center;
+}
+
+.photo-width {
+	width: 300px;
+}
+
+#show-names-div {
+	display: none;
+}
+
+#tic-tac-toe-board {
+	background-image: url(../img/tic-tac-toe-board.png);
+	width: 650px;
+	height: 650px;
+}
+
+button {
+	font-style: italic;
+}
+
+h1 {
+	line-height: 80%;
+}
+
+h6 {
+	font-style: italic;
+}
+
+input {
+	font-size: 16px;
+}
+
+label {
+	font-style: normal;
+	font-size: 16px;
+}

@@ -58,7 +58,7 @@ describe("Board", function() {
       testBoard.boardSpace[1][2].isMarked().should.equal(true);
     });
 
-    it("does nothing and returns false if the chosen square has already been marked", function () {
+    it("does nothing if the chosen square has already been marked and returns false", function () {
       var testBoard = Object.create(Board);
       testBoard.initialize();
       var testPlayer1 = Object.create(Player);
