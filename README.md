@@ -31,6 +31,7 @@ Unlicense
 * LICENSE.md : Licensing terms (Unlicense)
 * README.md : This file
 * Directory css : bootstrap.css (bootstrap), bootstrap.js (bootstrap), styles.css (written by author)
+* Directory img: game-over.gif (downloaded from Web; image to be displayed when gave has been won), rubiks-cube-tic-tac-toe0.jpg (downloaded from Web; image to be displayed when game is active), rubiks-cube-tic-tac-toe1.jpg (downloaded from Web; image to be displayed when game has been won)
 * index.html (written by author)
 * Directory js : jquery-1.11.1.js (jquery), scripts.js (written by author)
 * Directory spec : chai.js (chai), mocha.css (mocha), mocha.js (mocha), spec-runner.html (written by author), specs.js. (written by author)
