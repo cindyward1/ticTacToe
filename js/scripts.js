@@ -18,7 +18,17 @@ var Space = {
 
 		this.xCoordinate = inputXCoordinate;
 		this.yCoordinate = inputYCoordinate;
-		this.markedBy = 0; // initializes markedBy to 0 so isMarked will return false
+		this.markedBy = "X"; // initializes markedBy to 0 so isMarked will return false
+
+		$("img.square" + inputXCoordinate + inputYCoordinate).click (function (lockedXCoordinate, lockedYCoordinate, markedBy) {
+     		return function (event) {
+       			event.preventDefault();
+       			alert("space clicked = " + lockedXCoordinate + ", " + lockedYCoordinate);
+        		$(".square" + lockedXCoordinate + lockedYCoordinate + "-span").html("<img src='./img/scrabble-" + markedBy + 
+        		  "-tile.png' class='square" + lockedXCoordinate + lockedYCoordinate + "'>");
+        		$("img.square" + lockedXCoordinate + lockedYCoordinate).off ("click");
+     		};
+     	} (inputXCoordinate, inputYCoordinate, this.markedBy)); // immediately invoked function expression
 
 	}, // end of function Space.initialize
 
@@ -103,3 +113,51 @@ var Board = {
 }; // end of prototype Board
 
 
+$(document).ready (function () {
+
+
+	$("form#enter-names-form").submit (function (event) {
+
+		event.preventDefault();
+
+		function flashGameOver() { // set up callback function to fade the "game over" image in and out when the game is over
+ 			$("#game-over-image").animate({opacity: 0}).delay(500).animate({opacity: 1}).delay(500);
+		};
+
+		var player1Name = $("input#player1-name").val();
+		var player2Name = $("input#player2-name").val();
+
+		var firstPlayerName = player1Name; // initially set first player to be Player 1
+		var secondPlayerName = player2Name;
+		var firstPlayerChoice = Math.round(Math.random()); // random creates a random number between 0.0 and 1.0; round produces either 0 or 1
+		if (!firstPlayerChoice) {
+			firstPlayerName = player2Name;
+		 	secondPlayerName = player1Name; 
+		}; // if random number rounds to 0, first player is Player 2
+
+		$(".first-player-name").text(firstPlayerName);
+		$(".second-player-name").text(secondPlayerName);
+
+		var firstPlayer = Object.create (Player);
+		firstPlayer.initialize ("X", firstPlayerName);
+		var secondPlayer = Object.create (Player);
+		secondPlayer.initialize ("O", secondPlayerName);
+
+		$(".player-your-move").text(firstPlayerName);
+
+		$("#enter-names-div").hide();
+		$("#show-names-div").show();
+
+		theBoard = Object.create(Board);
+		theBoard.initialize();
+
+
+
+
+
+
+
+		// setInterval(flashGameOver,2000);
+
+	});
+});

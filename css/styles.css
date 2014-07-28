@@ -1,9 +1,78 @@
+.btn-primary {
+	background-color: #4466ff;
+}
+
+.btn-primary:hover {
+	background-color: #0000ff;
+}
+
 .centering-wrapper {
 	text-align: center;
 }
 
+.game-over-result, .game-over-image {
+	display: none;
+}
+
 .photo-width {
 	width: 300px;
+}
+
+.player-your-move {
+	background-color: #aaccff
+}
+
+.square00 {
+	position: absolute;
+	top: 7em;
+	left: 5em;
+}
+
+.square01 {
+	position: absolute;
+	top: 7em;
+	left: 20.5em;
+}
+
+.square02 {
+	position: absolute;
+	top: 7em;
+	left: 36em;
+}
+
+.square10 {
+	position: absolute;
+	top: 22em;
+	left: 5em;
+}
+
+.square11 {
+	position: absolute;
+	top: 22em;
+	left: 20.5em;
+}
+
+.square12 {
+	position: absolute;
+	top: 22em;
+	left: 36em;
+}
+.square20 {
+	position: absolute;
+	top: 37em;
+	left: 5em;
+}
+
+.square21 {
+	position: absolute;
+	top: 37em;
+	left: 20.5em;
+}
+
+.square22 {
+	position: absolute;
+	top: 37em;
+	left: 36em;
 }
 
 #show-names-div {
@@ -29,10 +98,10 @@ h6 {
 }
 
 input {
-	font-size: 16px;
+	font-size: 20px;
 }
 
 label {
 	font-style: normal;
-	font-size: 16px;
+	font-size: 20px;
 }

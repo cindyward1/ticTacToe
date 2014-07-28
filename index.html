@@ -11,33 +11,45 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4 centering-wrapper">
-      	<br><br><br><br>
+      	<br>
+      	<button type="reset" id="reset-button" class="btn btn-danger" onClick="window.location.reload()">Restart Tic-Tac-Toe</button>
+      	<br>
       	<span class="logo-image-to-display"><img src="./img/rubiks-cube-tic-tac-toe0.jpg" class="photo-width"></span><br>
       	<h1>Let's Play</h1>
-      	<h1>Tic-Tac-Toe!</h1><br>
+      	<h1>Tic-Tac-Toe!</h1>
       	<div id="enter-names-div">
-      	  <h4>Please enter the players' names below</h4>
+      	  <br><h4>Please enter the players' names below</h4>
       	  <h6>The player who gets the first turn will be chosen randomly<h6><br>
       	  <form id="enter-names-form">
       		<label for="player1-name">Player 1&nbsp&nbsp&nbsp</label>
-      		<input id="player1-name" type="text" size="15"><br>
+      		<input id="player1-name" type="text" size="15" required><br><br>
       		<label for="player2-name">Player 2&nbsp&nbsp&nbsp</label>
-      		<input id="player2-name" type="text" size="15"><br><br>
-      		<button type="submit" class="btn btn-danger">Who goes first?</button>
+      		<input id="player2-name" type="text" size="15" required><br><br><br>
+      		<button type="submit" class="btn btn-primary">Who goes first?</button>
       	  </form>
       	</div> <!-- enter-names-div -->
       	<div id="show-names-div">
-      		<h3><span class="first-player-name"></span> goes first as X.</h3>
-      		<h3><span class="second-player-name"></span> goes second as O.</h3>
-      		<span id="game-over-area"><img src="./img/game-over.gif" width="300"></span><br>
-      		<span id="game-over-reason"><h2>The winner is X</h2></span>
+      		<hr><h3><span class="first-player-name"></span> goes first as X.</h3>
+      		<h3><span class="second-player-name"></span> goes second as O.</h3><br>
+      		<h2><span class="player-your-move"></span>, it's your move!<h2>
+      		<span class="game-over-result"><h2>Game result</h2></span>
+      		<img src="./img/game-over.png" class="game-over-image photo-width">
       	</div> <!-- show-names-div -->
       </div> <!-- col-md-4 centering-wrapper -->
       <div class="col-md-1">
       </div> <!-- col-md-1 spacer column -->
       <div class="col-md-7">
-      	<br><br><br><br>
+      	<br><br>
       	<div id="tic-tac-toe-board">
+      		<span class="square00-span"><img src="./img/blank.png" class="square00"></span>
+      		<span class="square01-span"><img src="./img/blank.png" class="square01"></span>
+      		<span class="square02-span"><img src="./img/blank.png" class="square02"></span>
+      		<span class="square10-span"><img src="./img/blank.png" class="square10"></span>
+      		<span class="square11-span"><img src="./img/blank.png" class="square11"></span>
+      		<span class="square12-span"><img src="./img/blank.png" class="square12"></span>
+      		<span class="square20-span"><img src="./img/blank.png" class="square20"></span>
+      		<span class="square21-span"><img src="./img/blank.png" class="square21"></span>
+      		<span class="square22-span"><img src="./img/blank.png" class="square22"></span>
       	</div>
       </div>
     </div> <!-- row -->
