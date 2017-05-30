@@ -12,7 +12,7 @@ Clone this repository and open up the index.html file in a browser window. This 
 ### Dependencies (included in the repository, please see below)
 * [jquery](http://jquery.com/). Please use version 1.11.1.
 * [bootstrap](http://getbootstrap.com/). Please use version 3.1.1.
-* [mocha](http://visionmedia.github.io/mocha/). No version number noted.
+* [mocha](http://mochajs.org/). No version number noted.
 * [chai](http://chaijs.com/). No version number noted.
 
 ### Author
